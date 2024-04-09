@@ -107,7 +107,7 @@ nav ul li a:hover::after{
 }
 
 .technical-headings{
-    color: #b54769;
+    color: #ff004f;
 }
 
 .sub-title{
@@ -150,8 +150,8 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #b54769;
-    font-size: 14px;
+    color: #ff004f;
+    font-size: 17px;
 }
 
 .tab-contents{
@@ -161,6 +161,102 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
+/* ----------------------------------Certifications----------------------- */
+#certifications{
+    padding: 30px 0;
+}
+
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.cards {
+    display: flex;
+    background: #262626;
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: background 0.5s, transform 0.5s;
+
+}
+
+.cards.reverse {
+    flex-direction: row-reverse;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.cards img {
+    max-width: 550px;
+    margin-right: 90px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.cards.reverse img {
+    max-width: 550px;
+    margin-left: 90px;
+    margin-right: 0;
+    transition: transform 0.5s;
+}
+
+.cert-description {
+    flex: 1;
+}
+
+.heading{
+    margin-bottom: 5px;
+}
+
+.cert-description ul li{
+    list-style: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.credential{
+    display: flex;
+    justify-content: space-between;
+}
+
+.credential a{
+    opacity: 0;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    transition: opacity 0.5s;
+}
+
+.certifications-list .cards p {
+    margin: 0;
+    color: #fff;
+}
+
+.certifications-list .cards:hover {
+    background: #ff004f;
+    overflow: hidden;
+
+    transform: translateY(-5px);
+}
+
+.certifications-list .cards:hover a{
+    opacity: 1;
+}
+
+.certifications-list .cards:hover img{
+    transform: scale(1.11);
+    
+}
+
 
 /* -----------------------------------servies---------------------------- */
 #services{
@@ -174,10 +270,19 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 
+.card{
+    display: flex;
+    background: #262626;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
 .services-list div{
     background: #262626;
     padding: 40px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s
@@ -192,14 +297,6 @@ nav ul li a:hover::after{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-}
-
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
 }
 
 .services-list div:hover{
@@ -233,6 +330,15 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    margin-right: 15px;
+}
+
 .layer{
     width: 100%;
     height: 0;
@@ -248,7 +354,7 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0, 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     transition: height 0.5s;
 }
 
@@ -435,10 +541,101 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+    .cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .cards.reverse{
+        flex-direction: column;
+    }
+
+    .cards img {
+        max-width: 100%; /* Make images responsive */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .cards.reverse img {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .cert-description {
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .credential {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .credential a {
+        width: 35px; /* Auto width for responsiveness */
+        height: 35px; /* Auto height for responsiveness */
+        line-height: 35px; /* Reset line-height */
+        opacity: 1; /* Ensure link is visible */
+        
+    }
+
+    .certifications-list .cards:hover img {
+        transform: none; /* Reset transform on hover */
+    }
 }
 
 #msg{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    .certifications-list {
+        margin-top: 20px; /* Adjust margin for spacing */
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 20px; /* Adjust padding */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .cards.reverse{
+        flex-direction: column; /* Stack cards vertically */
+        padding: 20px; /* Adjust padding */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .cards img {
+        max-width: 100%; /* Make images responsive */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-right: 0;
+    }
+
+    .cards.reverse img {
+        max-width: 100%; /* Make images responsive */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-left: 0;
+    }
+
+    .cert-description {
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .credential {
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .credential a {
+        width: 40px; /* Auto width for responsiveness */
+        height: 40px; /* Auto height for responsiveness */
+        line-height: 40px; /* Reset line-height */
+        margin-top: 10px; /* Add top margin for spacing */
+        opacity: 1; /* Ensure link is visible */
+    }
+
+    .certifications-list .cards:hover img {
+        transform: none; /* Reset transform on hover */
+    }
 }
