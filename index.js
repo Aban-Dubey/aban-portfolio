@@ -21,23 +21,3 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = '-200px';
 }
-
-// ---------------------------contact form submission to google sheet------------------------------------
-
-// const scriptURL = 'https://script.google.com/macros/s/AKfycbwkH3ckmterYr5uXnRoGH4PxV4MW_TXIpjDi7kXiz4rw3EvWJya5S3XJ2pLj5LB72Ta/exec';
-// const form = document.forms['submit-to-google-sheet'];
-// const msg = document.getElementById("msg");
-  
-// form.addEventListener('submit', e => {
-//     e.preventDefault()
-//     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-//     .then(response => {
-//         msg.innerHTML = "Message sent successfully!"
-//         setTimeout(function() {
-//             msg.innerHTML = ""
-//         },5000)
-//         form.reset()
-//     })
-//     .catch(error => console.error('Error!', error.message))
-// });
-
