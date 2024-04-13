@@ -106,8 +106,20 @@ nav ul li a:hover::after{
      flex-basis: 60%; /*for col-1 width is 35% and for col-2 width is 60%. This makes a gap of 5% in between them. */
 }
 
+.about-col-2 .technical-toolkit{
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .technical-headings{
     color: #ff004f;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#technical-toolkit-heading{
+    font-size: 17px;
+    font-weight: 300;
 }
 
 .sub-title{
